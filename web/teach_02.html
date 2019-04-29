@@ -9,6 +9,9 @@
 			$("#background").click(function(){
 				$("#div1").css("background-color", $("#backcolor").val());
 			});
+			$("#toggle").click(function(){
+				$("div3").fadeToggle();
+			});
 		});
 	</script>
 </head>
@@ -26,7 +29,8 @@
 	Change Color: <input type="text" id= "color"><br>
 	<button onclick="changeColor()">Change Color</button><br>
 	Change Background Color: <input type="text" id= "backcolor"><br>
-	<button id="background">Change Background Color</button>
+	<button id="background">Change Background Color</button><br>
+	<button id="toggle">Toggle Visibility</button><br>
 	<script type="text/javascript" src= "teach_02.js">
 	</script>
 </body>
