@@ -2,5 +2,5 @@ function alertUser() {
 	alert("Clicked!");
 }
 function changeColor() {
-	document.getElementbyID("div1").style.color = 'black'; 
+	document.getElementById('div2').style.color = 'red';
 }
