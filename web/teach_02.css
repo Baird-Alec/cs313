@@ -1,16 +1,13 @@
 /* teach_02 style */
 #div1 {
- background-color: #333300;
  color: #FFFFFF;
+ font-family: "Times New Roman";
 }
 #div2 {
  color: #FFFF33;
- text-align: center;
- font: italic 200% fantasy;
+ font-family: Arial;
 }
 #div3 {
- background-color: #FFFF33;
  color: #333300;
- text-align: right;
- border: 3px groove #FFFF33;
+ font-family: Georgia;
 }
