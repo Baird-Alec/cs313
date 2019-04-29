@@ -4,6 +4,13 @@
 	<title>Teach 02 Activity</title>
 	<link rel="stylesheet" type="text/css" href="teach_02.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#background").click(function(){
+				$("#div1").css("background-color", "yellow");
+			});
+		});
+	</script>
 </head>
 <body>
 	<div id="div1" class="divs">
@@ -17,7 +24,9 @@
 	</div>
 	<button onclick="alertUser()">Click Me</button><br>
 	Change Color: <input type="text" id= "color"><br>
-	<button onclick="changeColor()">Change Color</button>
+	<button onclick="changeColor()">Change Color</button><br>
+	Change Background Color: <input type="text" id= "backcolor"><br>
+	<button id="background">Change Background Color</button>
 	<script type="text/javascript" src= "teach_02.js">
 	</script>
 </body>
