@@ -14,3 +14,7 @@
  color: white;
  font-size: 20px;
 }
+
+.divs:hover {
+	font-weight: bold;
+}
