@@ -1,13 +1,16 @@
 /* teach_02 style */
 #div1 {
- color: AliceBlue;
- font-family: Helvetica;
+ background-color: Navy;
+ color: white;
+ font-size: 12;
 }
 #div2 {
- color: Aqua;
- font-family: Arial;
+ background-color: Aqua;
+ color: white;
+ font-size: 16;
 }
 #div3 {
- color: IndianRed;
- font-family: Georgia;
+ background-color: IndianRed;
+ color: white;
+ font-size: 20;
 }
