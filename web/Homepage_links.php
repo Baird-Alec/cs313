@@ -6,6 +6,9 @@
 <body>
 <h1>CS 313 Assignments</h1>
 <p>This page will hold links to other assignments as they are created.</p><br>
-<a href="Homepage_intro.php">Return to Home</a>
+<a href="Homepage_intro.php">Return to Home</a><br>
+	<?php
+		require 'Homepage.php';
+	?>
 </body>
 </html>
