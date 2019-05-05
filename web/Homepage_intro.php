@@ -16,7 +16,7 @@
 	<h3>Links to CIT 261 Assignments</h3>
 	<a href="CIT261_links.php">CIT 261</a>
 	<?php
-	require 'Homepage.php;
+	require 'Homepage.php';
 	?>
 </body>
 <script type="text/javascript">
