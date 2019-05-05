@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="Homepage.css">
 </head>
 <body>
-	<img src="me.jpg">
+	<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="me.jpg" alt="Picture of Alec">
 	<p>Hello! My name is Alec Baird, and I am a 24 year old senior majoring
    in Software Engineering. I have been married to my wife for over 2 years,
    and we are looking to move to a new area at the end of the summer. I currently
@@ -17,4 +17,15 @@
 	<h3>Links to CIT 261 Assignments</h3>
 	<a href="CIT261_links.html">CIT 261</a>
 </body>
+<script type="text/javascript">
+	function bigImg(x) {
+  x.style.height = "256px";
+  x.style.width = "256px";
+}
+
+function normalImg(x) {
+  x.style.height = "128px";
+  x.style.width = "128px";
+}
+</script>
 </html>
