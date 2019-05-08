@@ -1,7 +1,14 @@
 <?php
 // Start the session
 session_start();
+// create an array
+$my_array=array();
+ 
+// put the array in a session variable
+$_SESSION['items']=$my_array;
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +24,18 @@ Sweater: $55.00<button onclick="add('Sweater')">Add to Cart</button><br>
 </body>
 <script type="text/javascript">
 	function add(item) {
-		alert(item);
+		$_SESSION('items').push(item);
+	}
+	function AJAX() {
+		var xhttp = new XMLHttpRequest();
+  		xhttp.onreadystatechange = function() {
+    		if (this.readyState == 4 && this.status == 200) {
+      			document.getElementById("demo").innerHTML =
+      		this.responseText;
+    		}
+  		};
+  	xhttp.open("GET", ""demo_get.asp?t=" + Math.random()", true);
+  	xhttp.send();
 	}
 </script>
 </html>
