@@ -26,7 +26,7 @@ Sweater: $55.00<button onclick="add('Sweater')">Add to Cart</button><br>
 	function add(item) {
 		alert(item);
 	}
-	function AJAX() {
+	function AJAX(item) {
 		var xhttp = new XMLHttpRequest();
   		xhttp.onreadystatechange = function() {
     		if (this.readyState == 4 && this.status == 200) {
@@ -34,7 +34,7 @@ Sweater: $55.00<button onclick="add('Sweater')">Add to Cart</button><br>
       		this.responseText;
     		}
   		};
-  	xhttp.open("GET", ""demo_get.asp?t=" + Math.random()", true);
+  	xhttp.open("GET", "demo_get.asp?item=" + item, true);
   	xhttp.send();
 	}
 </script>
