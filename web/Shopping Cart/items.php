@@ -13,7 +13,7 @@ Sweater: $55.00<button onclick="add(\'' + Sweater + '\')">Add to Cart</button><b
 </body>
 <script type="text/javascript">
 	function add(item) {
-		alert(item);
+		alert("Test");
 	}
 </script>
 </html>
