@@ -9,7 +9,7 @@ session_start();
 	<title>Cart Page</title>
 </head>
 <body>
-	You are buying: 
+	You are buying:<br>
 <?php
 	if (isset($_SESSION['top']))
 	{

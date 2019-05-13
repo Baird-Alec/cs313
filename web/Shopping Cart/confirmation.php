@@ -17,6 +17,22 @@ $_SESSION['zip'] = $_GET['Zip'];
 	<title>Confirmation Page</title>
 </head>
 <body>
+	You are buying:<br>
+<?php
+	if (isset($_SESSION['top']))
+	{
+		echo nl2br("One shirt\r\n");
+	}
+	if (isset($_SESSION['bottom']))
+	{
+		echo nl2br("One pair of jeans\r\n");
+	}
+	if (isset($_SESSION['coat']))
+	{
+		echo nl2br("One sweater\r\n");
+	}
+?>
+Ship to: <br>
 <?php
 	if (isset($_SESSION['street']))
 	{
