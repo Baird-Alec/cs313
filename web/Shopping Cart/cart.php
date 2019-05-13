@@ -1,9 +1,6 @@
 <?php
 // Start the session
 session_start();
-$_SESSION['top'] = $_GET['T-Shirt'];
-$_SESSION['bottom'] = $_GET['Jeans'];
-$_SESSION['coat'] = $_GET['Sweater'];
 ?>
 
 <!DOCTYPE html>
@@ -12,18 +9,19 @@ $_SESSION['coat'] = $_GET['Sweater'];
 	<title>Cart Page</title>
 </head>
 <body>
+	You are buying: 
 <?php
 	if (isset($_SESSION['top']))
 	{
-		echo "shirt found";
+		echo nl2br("One shirt\r\n");
 	}
 	if (isset($_SESSION['bottom']))
 	{
-		echo "jeans found";
+		echo nl2br("One pair of jeans\r\n");
 	}
 	if (isset($_SESSION['coat']))
 	{
-		echo "sweater found";
+		echo nl2br("One sweater\r\n");
 	}
 ?>
 <a href="items.php">Return to Browsing</a><br>
