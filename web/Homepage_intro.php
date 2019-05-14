@@ -14,7 +14,7 @@
 	<h3>Links to CS 313 Assignments</h3>
 	<a href="Homepage_links.php">CS 313</a>
 	<h3>Links to CIT 261 Assignments</h3>
-	<a href="CIT261_links.php">CIT 261</a><br>
+	<a href="CIT261/home.html">CIT 261</a><br>
 	<?php
 		require 'Homepage.php';
 	?>
