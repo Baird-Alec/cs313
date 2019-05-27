@@ -35,10 +35,9 @@
         }
     ?>
     <?php
-    foreach ($db->query('SELECT USERNAME from event') as $row)
+    foreach ($db->query('SELECT USERNAME from user') as $row)
     {
     echo 'user: ' . $row['username'];
-    echo ' password: ' . $row['password'];
     echo '<br/>';
     }
     ?>
