@@ -1,4 +1,4 @@
-INSERT INTO "USER" (USERNAME, FIRST, LAST) VALUES
+INSERT INTO USER_INFO (USERNAME, FIRST, LAST) VALUES
 ('alec40baird', 'Alec',  'Baird'),
 ('emmaash', 'Emma', 'Baird'),
 ('dkbaird', 'Kathy', 'Baird'),
