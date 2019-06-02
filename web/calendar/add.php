@@ -40,7 +40,7 @@
         echo '\'s Events:</h1>'; ?>
 
         <?php
-        foreach ($db->query("SELECT TITLE from EVENT where username = USERNAME") as $row)
+        foreach ($db->query("SELECT TITLE from EVENT where $username = USERNAME") as $row)
         {
             echo 'found';
             echo 'Event: ' . "$row[title]";
