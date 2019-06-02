@@ -37,7 +37,7 @@
         {
         echo 'User: ' . $row['username'];
         echo '<br/>';
-       echo "<a href= 'add.php?username=$row['username]'>?</a>";
+       echo "<a href= 'add.php?username=$row['username']'>?</a>";
         }
     ?>
 
