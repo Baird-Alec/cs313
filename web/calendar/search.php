@@ -31,11 +31,11 @@
         die();
         }
     ?>
-    Results:
+    Results:<br>
     <?php
         foreach ($db->query('SELECT USERNAME from user_info') as $row)
         {
-        echo 'user: ' . $row['username'];
+        echo 'User: ' . $row['username'];
         echo '<br/>';
         }
     ?>
