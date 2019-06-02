@@ -1,4 +1,5 @@
-Search by Username:
+require "home.php";
+Results:
 <?php
     foreach ($db->query('SELECT USERNAME from user_info') as $row)
     {
