@@ -40,8 +40,9 @@
         echo '\'s Events:</h1>'; ?>
 
         <?php
-        foreach ($db->query('SELECT TITLE from "EVENT"') as $row)
+        foreach ($db->query('SELECT TITLE from EVENT') as $row)
         {
+            echo 'found';
             echo 'Event: ' . "$row[title]";
             echo "<br/>";
         }
