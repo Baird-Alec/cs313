@@ -37,8 +37,8 @@
         {
         echo 'User: ' . $row['username'];
         echo '<br>';
-        echo "<a href= 'add.php?username=1>?</a>";
-        echo '<br>';
+        //echo "<a href= 'add.php?username=1>?</a>";
+        //echo '<br>';
         }
     ?>
 
