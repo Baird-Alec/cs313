@@ -35,7 +35,7 @@
     <?php
         foreach ($db->query('SELECT USERNAME from user_info') as $row)
         {
-        echo 'User: ' . 'test';
+        echo 'User: ' . '$row[username]';
         echo "<a href= 'add.php?usern=1'>Add</a>";
         echo "<br/>";
         }
