@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Seach Results</title>
+        <title>Search Results</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
@@ -36,7 +36,7 @@
         foreach ($db->query('SELECT USERNAME from user_info') as $row)
         {
         echo 'User: ' . "$row[username]";
-        echo "<a href= 'add.php?user=$row[username]'>Add</a>";
+        echo "<a href= 'add.php?user=$row[username]'>Add Event for User?</a>";
         echo "<br/>";
         }
     ?>
