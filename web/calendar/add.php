@@ -36,6 +36,7 @@
             }
         ?>
 
-        <?php echo "$username" . '\'s events'"; ?>
+        <?php echo "$username";
+        echo '\'s Events'; ?>
     </body>
 </html>
