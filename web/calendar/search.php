@@ -37,6 +37,7 @@
         {
         echo 'User: ' . $row['username'];
         echo '<br/>';
+        echo "<a href= 'add.php?username=$row['username]'>Add new event for ' . $row['username'] . '?";
         }
     ?>
 

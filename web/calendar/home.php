@@ -8,6 +8,6 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <a href = "search.php">Search by Username:</a><br>
+        <a href = "search.php">Retrieve Usernames:</a><br>
     </body>
 </html>
