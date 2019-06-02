@@ -8,9 +8,7 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        Search by Username:<br>
-        Search by Location:<br>
-        Search All Events:<br>
+        <a href = "search.php">Search by Username:</a><br>
         <?php
         try
         {
@@ -35,11 +33,7 @@
         }
     ?>
     <?php
-    foreach ($db->query('SELECT USERNAME from user_info') as $row)
-    {
-    echo 'user: ' . $row['username'];
-    echo '<br/>';
-    }
+
     ?>
     </body>
 </html>
