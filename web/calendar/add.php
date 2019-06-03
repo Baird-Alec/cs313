@@ -51,11 +51,11 @@
         <form methood="post" action="insert.php">
             <input type="hidden" name="username_add" value="<?php echo $username ?>">
             Title: <textarea name="title_add"></textarea><br>
-            Start Date (mm/dd/yyyy): <textarea name="start_date_add"></textarea><br>
+            <!--Start Date (mm/dd/yyyy): <textarea name="start_date_add"></textarea><br>
             End Date (mm/dd/yyyy): <textarea name="end_date_add"></textarea><br>
             Start Time (hh:dd AM/PM): <textarea name="start_time_add"></textarea><br>
             End Time (hh:dd AM/PM): <textarea name="end_time_add"></textarea><br>
-            Location: <textarea name="location_add"></textarea><br>
+            Location: <textarea name="location_add"></textarea><br>!-->
             <input type="submit">
         </form>
     </body>
