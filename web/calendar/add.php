@@ -50,7 +50,7 @@
         <h4>Add New Event:</h4>
         <form methood="post" action="insert.php">
             <input type="hidden" name="username_add" value="<?php echo $username ?>">
-            Title: <textarea name="title_add"></textarea><br>
+            Title: <textarea name="title_add" value="test"></textarea><br>
             <!--Start Date (mm/dd/yyyy): <textarea name="start_date_add"></textarea><br>
             End Date (mm/dd/yyyy): <textarea name="end_date_add"></textarea><br>
             Start Time (hh:dd AM/PM): <textarea name="start_time_add"></textarea><br>
