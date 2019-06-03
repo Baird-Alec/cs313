@@ -19,39 +19,39 @@
 
         function test()
         {
-            document.getElementById("title").innerHtml = "Test";
+            document.getElementById("title").innerHTML = "Test";
         }
 
         function myDisplay()
         {
-            document.getElementById("title").innerHtml = "Title: " + myFav.title;
-            document.getElementById("genre").innerHtml = "Genre: " + myFav.genre;
-            document.getElementById("runtime").innerHtml = "Runtime: " + myFav.runtime + " minutes";
+            document.getElementById("title").innerHTML = "Title: " + myFav.title;
+            document.getElementById("genre").innerHTML = "Genre: " + myFav.genre;
+            document.getElementById("runtime").innerHTML = "Runtime: " + myFav.runtime + " minutes";
         }
 
         function wifeDisplay()
         {
-            document.getElementById("title").innerHtml = "Title: " + wifeFav.title;
-            document.getElementById("genre").innerHtml = "Genre: " + wifeFav.genre;
-            document.getElementById("runtime").innerHtml = "Runtime: " + wifeFav.runtime + " minutes";
+            document.getElementById("title").innerHTML = "Title: " + wifeFav.title;
+            document.getElementById("genre").innerHTML = "Genre: " + wifeFav.genre;
+            document.getElementById("runtime").innerHTML = "Runtime: " + wifeFav.runtime + " minutes";
         }
 
         function longer(one, two)
         {
             if (one.runtime > two.runtime)
             {
-                document.getElementById("length").innerHtml = one.title + " is longer!";
+                document.getElementById("length").innerHTML = one.title + " is longer!";
             }
             else
             {
-                document.getElementById("length").innerHtml = two.title + "is longer!";
+                document.getElementById("length").innerHTML = two.title + "is longer!";
             }
         }
 
         </script>
 
         <h1>Javascript Object Check</h1>
-        <div id="title"></div>
+        <p id="title"></p>
         <div id="genre"></div>
         <div id="runtime"></div>
         <button type="button" onclick="myDisplay()">Click for my favorite movie</button>
