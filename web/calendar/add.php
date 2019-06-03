@@ -40,12 +40,20 @@
         echo '\'s Events:</h1>'; ?>
 
         <?php
-        foreach ($db->query("SELECT TITLE from EVENT where $username = EVENT.USERNAME") as $row)
+        foreach ($db->query("SELECT TITLE from EVENT where username = USERNAME") as $row)
         {
-            echo 'found';
             echo 'Event: ' . "$row[title]";
             echo "<br/>";
         }
         ?>
+        <form methood="post" action="insert.php">
+            <textarea name="username_add"></textarea>
+            <textarea name="title_add"></textarea>
+            <textarea name="start_date_add"></textarea>
+            <textarea name="end_date_add"></textarea>
+            <textarea name="start_time_add"></textarea>
+            <textarea name="end_time_add"></textarea>
+            <textarea name="location_add"></textarea>
+        </form>
     </body>
 </html>
