@@ -37,7 +37,7 @@
         ?>
 
         <?php echo "<h1>$username";
-        echo '\'s Events:</h1>'; ?>
+        echo '\'s Current Events:</h1>'; ?>
 
         <?php
         foreach ($db->query("SELECT TITLE from EVENT where username = USERNAME") as $row)
@@ -47,7 +47,7 @@
         }
         ?>
         <br><br>
-        <h4>Add new form:</h4>
+        <h4>Add New Event:</h4>
         <form methood="post" action="insert.php">
             Username: <textarea name="username_add"></textarea><br>
             Title: <textarea name="title_add"></textarea><br>
@@ -56,6 +56,7 @@
             Start Time (hh:dd AM/PM): <textarea name="start_time_add"></textarea><br>
             End Time (hh:dd AM/PM): <textarea name="end_time_add"></textarea><br>
             Location: <textarea name="location_add"></textarea><br>
+            <input type="submit">
         </form>
     </body>
 </html>
