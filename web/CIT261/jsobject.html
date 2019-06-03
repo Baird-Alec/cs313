@@ -19,32 +19,32 @@
 
         function test()
         {
-            document.getElementById("title") = "Test";
+            document.getElementById("title").innerHtml = "Test";
         }
 
         function myDisplay()
         {
-            document.getElementById("title") = "Title: " + myFav.title;
-            document.getElementById("genre") = "Genre: " + myFav.genre;
-            document.getElementById("runtime") = "Runtime: " + myFav.runtime + " minutes";
+            document.getElementById("title").innerHtml = "Title: " + myFav.title;
+            document.getElementById("genre").innerHtml = "Genre: " + myFav.genre;
+            document.getElementById("runtime").innerHtml = "Runtime: " + myFav.runtime + " minutes";
         }
 
         function wifeDisplay()
         {
-            document.getElementById("title") = "Title: " + wifeFav.title;
-            document.getElementById("genre") = "Genre: " + wifeFav.genre;
-            document.getElementById("runtime") = "Runtime: " + wifeFav.runtime + " minutes";
+            document.getElementById("title").innerHtml = "Title: " + wifeFav.title;
+            document.getElementById("genre").innerHtml = "Genre: " + wifeFav.genre;
+            document.getElementById("runtime").innerHtml = "Runtime: " + wifeFav.runtime + " minutes";
         }
 
         function longer(one, two)
         {
             if (one.runtime > two.runtime)
             {
-                document.getElementById("length") = one.title + " is longer!";
+                document.getElementById("length").innerHtml = one.title + " is longer!";
             }
             else
             {
-                document.getElementById("length") = two.title + "is longer!";
+                document.getElementById("length").innerHtml = two.title + "is longer!";
             }
         }
 
