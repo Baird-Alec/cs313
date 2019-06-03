@@ -1,11 +1,13 @@
 <?php
         $username_add = $_POST['username_add'];
-        $title_add = $_POST['title_add'];
+        $title_add = htmlspecialchars($_POST['title_add']);
         $start_date_add = $_POST[start_date_add];
         $end_date_add = $_POST[end_date_add];
         $start_time_add = $_POST[start_time_add];
         $end_time_add = $_POST[end_time_add];
         $location_add = $_POST[location_add];
+        echo '$title_add';
+        echo "$title_add";
 ?>
 
 <!DOCTYPE html>
