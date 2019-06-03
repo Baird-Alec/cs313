@@ -46,6 +46,8 @@
             echo "<br/>";
         }
         ?>
+        <br><br>
+        <h4>Add new form:</h4>
         <form methood="post" action="insert.php">
             Username: <textarea name="username_add"></textarea><br>
             Title: <textarea name="title_add"></textarea><br>
