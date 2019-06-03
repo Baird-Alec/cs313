@@ -1,0 +1,26 @@
+[
+    {
+        "Name" : "Dirk", "Age" : 54, "Height" : "71 inches", "Weight" : 205
+    },
+    {
+        "Name" : "Kathy", "Age" : 52, "Height" : "68 inches", "Weight" : 175
+    },
+    {
+        "Name" : "Bryant", "Age" : 28, "Height" : "70 inches", "Weight" : 140
+    },
+    {
+        "Name" : "Janelle", "Age" : 26, "Height" : "65 inches", "Weight" : 165
+    },
+    {
+        "Name" : "Alec", "Age" : 24, "Height" : "73 inches", "Weight" : 210
+    },
+    {
+        "Name" : "Dallin", "Age" : 22, "Height" : "72 inches", "Weight" : 175
+    },
+    {
+        "Name" : "Tyler", "Age" : 18, "Height" : "74 inches", "Weight" : 170
+    },
+    {
+        "Name" : "Caden", "Age" : 14, "Height" : "67 inches", "Weight" : 120
+    }
+]
