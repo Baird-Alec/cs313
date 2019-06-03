@@ -44,9 +44,9 @@
             $db->query("INSERT INTO EVENT (USERNAME, TITLE, START_DATE, END_DATE, START_TIME, END_TIME, LOCATION) VALUES
             ($username_add, $title_add, $start_date_add, $end_date_add, $start_time_add, $end_time_add, $location_add)";
 
-            $new_page = "add.php?username=$username_add";
-            header("LOCATION: $new_page");
-            die();
+            //$new_page = "add.php?username=$username_add";
+            //header("LOCATION: $new_page");
+            //die();
             ?>
     </body>
 </html>
