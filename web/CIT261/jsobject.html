@@ -17,6 +17,11 @@
         var myFav = new Movie("Pirates of the Caribbean", "Drama", 121);
         var wifeFav = new Movie("Get Smart", "Comedy", 98);
 
+        function test()
+        {
+            document.getElementById("title") = "Test";
+        }
+
         function myDisplay()
         {
             document.getElementById("title") = "Title: " + myFav.title;
@@ -53,5 +58,6 @@
         <button type="button" onclick="wifeDisplay()">Click for my wife's favorite movie</button>
         <div id="length"></div>
         <button type="button" onclick="longer(myFav,  wifeFav)">Click to find which movie is longer</button>
+        <button type="button" onclick="test()">Test</button>
     </body>
 </html>
