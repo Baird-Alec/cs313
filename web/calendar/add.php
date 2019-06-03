@@ -47,13 +47,13 @@
         }
         ?>
         <form methood="post" action="insert.php">
-            <textarea name="username_add"></textarea>
-            <textarea name="title_add"></textarea>
-            <textarea name="start_date_add"></textarea>
-            <textarea name="end_date_add"></textarea>
-            <textarea name="start_time_add"></textarea>
-            <textarea name="end_time_add"></textarea>
-            <textarea name="location_add"></textarea>
+            Username: <textarea name="username_add"></textarea><br>
+            Title: <textarea name="title_add"></textarea><br>
+            Start Date (mm/dd/yyyy): <textarea name="start_date_add"></textarea><br>
+            End Date (mm/dd/yyyy): <textarea name="end_date_add"></textarea><br>
+            Start Time (hh:dd AM/PM): <textarea name="start_time_add"></textarea><br>
+            End Time (hh:dd AM/PM): <textarea name="end_time_add"></textarea><br>
+            Location: <textarea name="location_add"></textarea><br>
         </form>
     </body>
 </html>
