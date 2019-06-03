@@ -8,6 +8,7 @@
         //$location_add = $_POST[location_add];
         echo '$title_add';
         echo "$title_add";
+        echo "$username_add";
 ?>
 
 <!DOCTYPE html>
