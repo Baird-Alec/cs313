@@ -2,10 +2,56 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Javascript Object Demo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="default.css">
     </head>
     <body>
+        <script>
+        function Movie(title, genre, runtime) {
+            this.title = title;
+            this.genre = genre;
+            this.runtime = runtime;
+        }
+
+        var myFav = new Movie("Pirates of the Caribbean", "Drama", 121);
+        var wifeFav = new Movie("Get Smart", "Comedy", 98);
+
+        function myDisplay()
+        {
+            document.getElementById("title") = "Title: " + myFav.title;
+            document.getElementById("genre") = "Genre: " + myFav.genre;
+            document.getElementById("runtime") = "Runtime: " + myFav.runtime + " minutes";
+        }
+
+        function wifeDisplay()
+        {
+            document.getElementById("title") = "Title: " + wifeFav.title;
+            document.getElementById("genre") = "Genre: " + wifeFav.genre;
+            document.getElementById("runtime") = "Runtime: " + wifeFav.runtime + " minutes";
+        }
+
+        function longer(one, two)
+        {
+            if (one.runtime > two.runtime)
+            {
+                document.getElementById("length") = one.title + " is longer!";
+            }
+            else
+            {
+                document.getElementById("length") = two.title + "is longer!";
+            }
+        }
+
+        </script>
+
+        <h1>Javascript Object Check</h1>
+        <div id="title"></div>
+        <div id="genre"></div>
+        <div id="runtime"></div>
+        <input type="button" onclick="myDisplay()">Click for my favorite movie</button>
+        <input type="button" onclick="wifeDisplay()">Click for my wife's favorite movie</button>
+        <div id="length"></div>
+        <input type="button" onclick="longer(myFav,  wifeFav)">Click to find which movie is longer</button>
     </body>
 </html>
