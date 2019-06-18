@@ -8,7 +8,8 @@
         <link rel="stylesheet" href="default.css">
     </head>
     <body>
-        <ul id="demo">Names:</ul>
+        <ul id="demo">Family Member Names:</ul>
+        <ul id="age">Family Member Ages:</ul>
         <script>
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
@@ -18,7 +19,13 @@
                     var main = document.createElement("LI");
                     var firstName = document.createTextNode(element.Name);
                     main.appendChild(firstName);
-                    document.getElementById("demo").appendChild(main);    
+                    document.getElementById("demo").appendChild(main);        
+                });
+                myObj.forEach(element => {
+                    var main = document.createElement("LI");
+                    var age = document.createTextNode(element.Age);
+                    main.appendChild(age);
+                    document.getElementById("age").appendChild(main);        
                 });
 //                document.getElementById("demo").innerHTML = myObj[0].Name;
             }
