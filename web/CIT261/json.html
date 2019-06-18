@@ -8,14 +8,17 @@
         <link rel="stylesheet" href="default.css">
     </head>
     <body>
-        <p id="demo"></p></p>
+        <ul id="demo">Names:</ul>
         <script>
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var myObj = JSON.parse(this.responseText);
                 myObj.forEach(element => {
-                    document.getElementById("demo").innerHTML = element.Name;    
+                    var main = document.createElement("LI");
+                    var firstName = document.createTextNode(element.Name);
+                    main.appendChild(firstName);
+                    document.getElementById("demo").appendChild(main);    
                 });
 //                document.getElementById("demo").innerHTML = myObj[0].Name;
             }
