@@ -14,7 +14,7 @@
             xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var myObj = JSON.parse(this.responseText);
-                myObj.array.forEach(element => {
+                myObj.forEach(element => {
                     document.getElementById("demo").innerHTML = element.Name;    
                 });
                 document.getElementById("demo").innerHTML = myObj[0].Name;
