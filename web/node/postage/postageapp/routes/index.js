@@ -1,6 +1,6 @@
 var express = require('express');
-const app = express();
-const port = process.env.PORT || 3000;
+var app = express();
+var port = process.env.PORT || 3000;
 // tell it to use the public directory as one where static files live
 app.use(express.static(__dirname + '/public'));
 
@@ -114,10 +114,10 @@ function createPostage(response, mailtype, weight) {
   }
 
   	// Set up a JSON object of the values we want to pass along to the EJS result page
-	var params = {type: mailtype, price: price};
+	var params = {type: mailtype, weight: weight, price: price};
 
 	// Render the response, using the EJS page "result.ejs" in the pages directory
 	// Makes sure to pass it the parameters we need.
-	response.render('pages/result', params);
+	response.render('javascripts/result', params);
 
 }
