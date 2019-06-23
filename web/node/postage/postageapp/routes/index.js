@@ -1,6 +1,12 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 3000;
+var router = express.Router();
+module.exports = router;
+var bodyParser = require('body-parser')
+var jsonParser = bodyParser.json()
+express().use(bodyParser.urlencoded({extended: false}))
+
+var port = process.env.PORT || 5000;
 // tell it to use the public directory as one where static files live
 app.use(express.static(__dirname + '/public'));
 
@@ -10,7 +16,7 @@ app.set('view engine', 'ejs');
 
 // set up a rule that says requests to "/rates" should be handled by the
 // handleMath function below
-app.get('/rates', handleRates);
+app.get('/rates', jsonParser, handleRates);
 
 // start the server listening
 app.listen(port, function() {
