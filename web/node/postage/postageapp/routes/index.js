@@ -1,32 +1,31 @@
 var express = require('express');
-var app = express();
-var router = express.Router();
-module.exports = router;
+const path = require('path');
 var bodyParser = require('body-parser')
 var jsonParser = bodyParser.json()
-express().use(bodyParser.urlencoded({extended: false}))
-
+var router = express.Router()
+module.exports = router
 var port = process.env.PORT || 5000;
-// tell it to use the public directory as one where static files live
-app.use(express.static(__dirname + '/public'));
 
-// views is directory for all template files
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+// tell it to use the public directory as one where static files live
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('postageForm'))
+  .use(bodyParser.urlencoded({extended: false}))
 
 // set up a rule that says requests to "/rates" should be handled by the
 // handleMath function below
-app.get('/rates', jsonParser, handleRates);
-
+  .get('/rates', jsonParser, handleRates)
 // start the server listening
-app.listen(port, function() {
+  .listen(port, function() {
   console.log('Node app is running on port', port);
 });
 
 function handleRates(request, response) {
-  var mailType = request.query.mail;
+  var mailtype = request.query.mail;
   var weight = request.query.weight;
-  createPostage(mailtype, weight);
+  createPostage(response, mailtype, weight);
 }
 
 function createPostage(response, mailtype, weight) {
@@ -124,6 +123,6 @@ function createPostage(response, mailtype, weight) {
 
 	// Render the response, using the EJS page "result.ejs" in the pages directory
 	// Makes sure to pass it the parameters we need.
-	response.render('javascripts/result', params);
+	response.render('results', params);
 
 }
