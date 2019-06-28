@@ -40,24 +40,23 @@
         }
     </style>
     <body>
-        <div id ="circle1" class="transform circle" onmouseenter= addGrow()></div><br>
+        <h3>Scale Transforms</h3>
+        <div id ="circle1" class="transform circle"></div><br><br>
         <div id ="circle2" class="transform circle"></div><br>
-        <div id ="square1" class="transform square"></div><br>
+        <h3>Angle Transforms</h3>
+        <div id ="square1" class="transform square"></div><br><br>
         <div id ="square2" class="transform square"></div><br>
 
 
 
         <script>
-                function addGrow() {
-                    document.getElementById("circle1").classList.add("grow");
-                }
                 document.getElementById("circle2").addEventListener("mouseover", function () {
                     document.getElementById("circle2").classList.add("shrink");
                 });
-                document.getElementById('square1').addEventListener(onmouseover, function () {
+                document.getElementById('square1').addEventListener("mouseover", function () {
                     document.getElementById("square1").classList.add("spin");
                 });
-                document.getElementById('square2').addEventListener(onmouseover, function () {
+                document.getElementById('square2').addEventListener("onmouseover", function () {
                     document.getElementById("square1").classList.add("warp");
                 });
         </script>
