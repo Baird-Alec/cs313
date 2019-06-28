@@ -13,7 +13,7 @@
     </head>
     <style>
         .transform {
-            transition: transform 500ms;
+            transition: transform 1000ms;
         }
         .circle {
             height: 50px;
@@ -50,13 +50,13 @@
 
 
         <script>
-                document.getElementById("circle2").addEventListener("mouseover", function () {
+                document.getElementById("circle2").addEventListener("mouseenter", function () {
                     document.getElementById("circle2").classList.add("shrink");
                 });
-                document.getElementById('square1').addEventListener("mouseover", function () {
+                document.getElementById('square1').addEventListener("mouseenter", function () {
                     document.getElementById("square1").classList.add("spin");
                 });
-                document.getElementById('square2').addEventListener("onmouseover", function () {
+                document.getElementById('square2').addEventListener("mouseenter", function () {
                     document.getElementById("square1").classList.add("warp");
                 });
         </script>
