@@ -124,5 +124,6 @@ function createPostage(response, mailtype, weight) {
 	// Render the response, using the EJS page "result.ejs" in the pages directory
 	// Makes sure to pass it the parameters we need.
 	response.render('results', params);
+  //end
 
 }
