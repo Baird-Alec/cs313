@@ -27,10 +27,10 @@
             background-color: green;
         }
         .grow {
-            transform: scale(2,4);
+            transform: scale(1,2);
         }
         .stretch {
-            transform: scale(4,2);
+            transform: scale(2,1);
         }
         .spin {
             transform:rotate(220deg);
@@ -41,26 +41,24 @@
     </style>
     <body>
         <h3>Scale Transforms</h3>
-        <div id ="circle1" class="transform circle"></div><br><br>
-        <div id ="circle2" class="transform circle"></div><br>
-        <h3>Angle Transforms</h3>
         <div id ="square1" class="transform square"></div><br><br>
         <div id ="square2" class="transform square"></div><br>
-
-
+        <h3>Angle Transforms</h3>
+        <div id ="circle1" class="transform circle"></div><br><br>
+        <div id ="circle2" class="transform circle"></div><br>
 
         <script>
-            document.getElementById("circle1").addEventListener("mouseenter", function () {
-                    document.getElementById("circle1").classList.add("grow");
+            document.getElementById("square1").addEventListener("mouseenter", function () {
+                    document.getElementById("square1").classList.add("grow");
             });
-            document.getElementById("circle2").addEventListener("mouseenter", function () {
-                document.getElementById("circle2").classList.add("stretch");
+            document.getElementById("square2").addEventListener("mouseenter", function () {
+                document.getElementById("square2").classList.add("stretch");
             });
-            document.getElementById('square1').addEventListener("mouseenter", function () {
-                document.getElementById("square1").classList.add("spin");
+            document.getElementById('circle1').addEventListener("mouseenter", function () {
+                document.getElementById("circle1").classList.add("spin");
             });
-            document.getElementById('square2').addEventListener("mouseenter", function () {
-                document.getElementById("square2").classList.add("warp");
+            document.getElementById('circle2').addEventListener("mouseenter", function () {
+                document.getElementById("circle2").classList.add("warp");
             });
         </script>
     </body>
