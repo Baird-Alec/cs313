@@ -48,9 +48,10 @@
 
 
         <script>
-                document.getElementById('circle1').addEventListener(onmouseover, function () {
+                document.getElementById("circle1").addEventListener(onmouseover, addGrow());
+                function addGrow() {
                     document.getElementById("circle1").classList.add("grow");
-                });
+                }
                 document.getElementById('circle2').addEventListener(onmouseover, function () {
                     document.getElementById("circle2").classList.add("shrink");
                 });
