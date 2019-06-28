@@ -12,7 +12,10 @@
         <link rel="stylesheet" href="default.css">
     </head>
     <style>
-        
+        .transform {
+            position: absolute;
+            transition: transform 500ms;
+        }
         .circle {
             height: 50px;
             width: 50px;
@@ -38,15 +41,26 @@
         }
     </style>
     <body>
-        <div id ="circle1" class="circle"></div><br>
-        <div id ="circle2" class="circle"></div><br>
-        <div id ="circle3" class="circle"></div><br>
-        <div id ="square1" class="square"></div><br>
-        <div id ="square2" class="square"></div><br>
-        <div id ="square3" class="square"></div><br>
+        <div id ="circle1" class="transform circle"></div><br>
+        <div id ="circle2" class="transformcircle"></div><br>
+        <div id ="square1" class="transform square"></div><br>
+        <div id ="square2" class="transform square"></div><br>
 
 
 
-        <script src="" async defer></script>
+        <script>
+                document.getElementById('circle1').addEventListener(onmouseover, function () {
+                    document.getElementById("circle1").classList.add("grow");
+                });
+                document.getElementById('circle2').addEventListener(onmouseover, function () {
+                    document.getElementById("circle2").classList.add("shrink");
+                });
+                document.getElementById('square1').addEventListener(onmouseover, function () {
+                    document.getElementById("square1").classList.add("spin");
+                });
+                document.getElementById('square2').addEventListener(onmouseover, function () {
+                    document.getElementById("square1").classList.add("warp");
+                });
+        </script>
     </body>
 </html>
