@@ -40,7 +40,7 @@
         }
     </style>
     <body>
-        <div id ="circle1" class="transform circle"></div><br>
+        <div id ="circle1" class="transform circle" onmouseenter= addGrow()></div><br>
         <div id ="circle2" class="transform circle"></div><br>
         <div id ="square1" class="transform square"></div><br>
         <div id ="square2" class="transform square"></div><br>
@@ -48,7 +48,6 @@
 
 
         <script>
-                document.getElementById("circle1").addEventListener(onmouseenter, addGrow());
                 function addGrow() {
                     document.getElementById("circle1").classList.add("grow");
                 }
