@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Custom CSS</title>
+        <meta name="description" content="Custom CSS assignment for BYU-I">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="default.css">
+    </head>
+    <style>
+        .transform {
+            transition: transform 2000ms;
+        }
+        .circle {
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .square {
+            height: 50px;
+            width: 50px;
+            background-color: green;
+        }
+        .grow {
+            transform: scale(1,2);
+        }
+        .stretch {
+            transform: scale(2,1);
+        }
+        .spin {
+            transform:rotate(220deg);
+        }
+        .warp {
+            transform: skew(35deg);
+        }
+    </style>
+    <body>
+
+        <!--Transforms-->
+
+        <h3>Scale Transforms</h3>
+        <div id ="square1" class="transform square"></div><br><br>
+        <div id ="circle1" class="transform circle"></div><br>
+        <h3>Angle Transforms</h3>
+        <div id ="square2" class="transform square"></div><br><br>
+        <div id ="circle2" class="transform circle"></div><br>
+
+        <script>
+            document.getElementById("square1").addEventListener("mouseenter", function () {
+                    document.getElementById("square1").classList.add("grow");
+            });
+            document.getElementById("circle1").addEventListener("mouseenter", function () {
+                document.getElementById("circle1").classList.add("stretch");
+            });
+            document.getElementById('square2').addEventListener("mouseenter", function () {
+                document.getElementById("square2").classList.add("spin");
+            });
+            document.getElementById('circle2').addEventListener("mouseenter", function () {
+                document.getElementById("circle2").classList.add("warp");
+            });
+        </script>
+    </body>
+</html>
