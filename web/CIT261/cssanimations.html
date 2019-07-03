@@ -13,13 +13,13 @@
     </head>
     <style>
         @keyframes color {
-        0%   {background-color: blue;}
-        25%  {background-color: black;}
-        50%  {background-color: white;}
-        100% {background-color: green;}
+            0%   {background-color: blue;}
+            25%  {background-color: black;}
+            50%  {background-color: white;}
+            100% {background-color: green;}
         }
 
-        @keyframes movement {
+        @keyframes move {
             0%   {left:0px; top:0px;}
             25%  {left:200px; top:0px;}
             50%  {left:200px; top:200px;}
@@ -55,21 +55,13 @@
             transform:rotate(220deg);
             transition-delay: 1s;
             position: relative;
-            animation-name: movement;
+            animation-name: move;
         }
         .warp {
             transform: skew(35deg);
         }
     </style>
     <body>
-            
-            div {
-              width: 100px;
-              height: 100px;
-              background-color: red;
-              animation-name: example;
-              animation-duration: 4s;
-            }
 
         <!--Transforms-->
 
