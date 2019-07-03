@@ -37,6 +37,13 @@
             }
         }
 
+        @keyframes fade {
+            0%   {background-color: black; opacity: 1.0;}
+            25%  {background-color: black; opacity: 0.75;}
+            50%  {background-color: black; opacity: 0.5;}
+            100% {background-color: black; opacity: 0.25;}
+        }
+
         .transform {
             transition: transform 2000ms;
         }
@@ -92,13 +99,14 @@
             });
             document.getElementById("circle1").addEventListener("mouseenter", function () {
                 document.getElementById("circle1").classList.add("stretch");
+                document.getElementById("circle1").style.animation = "fade 4s";
             });
             document.getElementById('square2').addEventListener("mouseenter", function () {
                 document.getElementById("square2").classList.add("spin");
             });
             document.getElementById('circle2').addEventListener("mouseenter", function () {
                 document.getElementById("circle2").classList.add("warp");
-                document.getElementById('circle2').style.transitionTimingFunction = "ease-in;"
+                document.getElementById('circle2').style.transitionTimingFunction = "ease-in";
             });
         </script>
     </body>
