@@ -27,6 +27,18 @@
             100% {left:0px; top:0px;}
         }
 
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%; 
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+
         .transform {
             transition: transform 2000ms;
         }
@@ -56,10 +68,13 @@
             transition-delay: 1s;
             position: relative;
             animation-name: move;
+            animation-delay: 1s;
             animation-duration: 8s;
         }
         .warp {
             transform: skew(35deg);
+            animation-name: slidein;
+            animation-duration: 5s;
         }
     </style>
     <body>
