@@ -28,15 +28,19 @@
         }
         .grow {
             transform: scale(1,2);
+            transition: width 2, height 4;
         }
         .stretch {
             transform: scale(2,1);
+            transition-timing-function: ease-in-out;
         }
         .spin {
             transform:rotate(220deg);
+            transition-delay: 1s;
         }
         .warp {
             transform: skew(35deg);
+            transition-timing-function: ease-in;
         }
     </style>
     <body>
