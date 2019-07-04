@@ -11,14 +11,14 @@
         <p id="error"></p>
         <h3>Local Storage Example</h3>
         <p>Local Storage is a type of Web Storage that is supported by HTML5. Local Storage is storage that doesn't have an expiration date.</p><br>
-            First Name: <input type="text" name="name"><br>
-            Favorite Color: <input type="text" name="color"><br>
-            <p id="display">
+            First Name: <input type="text" id="name"><br>
+            Favorite Color: <input type="text" id="color"><br>
+            <p id="display"></p>
             <input type="button" value="Save" onclick="set()"><br>
             <input type="button" value="Retrieve" onclick="get()"><br>
-            </p>
             <script>
                 function set() {
+                    document.getElementById("display").innerHTML = "Start";
                     if (typeof(Storage) !== "undefined") {
                         var value = getElementById("name").innerHTML;
                         localStorage.setItem("name", value.value)
