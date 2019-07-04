@@ -59,9 +59,9 @@
                 }
                 function getsession() {
                     if (typeof(Storage) !== "undefined") {
-                        var find = document.getElementById("search").value;
-                        var send = sessionStorage.getItem(find);
-                        document.getElementById("displaysession").innerHTML = "Retrieved Food:" + send;
+                        var finds = document.getElementById("search").value;
+                        var sends = sessionStorage.getItem(finds);
+                        document.getElementById("displaysession").innerHTML = "Retrieved Food:" + sends;
                     } else {
                         document.getElementById("error").innerHTML = "Sorry, your browser doesn't support web storage";
                     }
