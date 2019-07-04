@@ -17,13 +17,17 @@
             First Name <input type="text" id="finder"><br>
             <input type="button" value="Retrieve" onclick="get()"><br>
             <p id="display"></p>
+
+
         <h3>Session Storage Example</h3>
         <p>Session Storage is a type of Web Storage that is supported bu HTML5. Session Storage can only store data for one session, and the data is deleted when the browser is closed.</p><br>
-        Last Name: <input type="text" name= "last"><br>
-        Favorite Food: <input type="text" name= "food"><br>
+        Last Name: <input type="text" id="last"><br>
+        Favorite Food: <input type="text" id="food"><br>
         <input type="button" value="Save" onclick="setsession()"><br>
-        Last Name: <input type="text" name= "search"><br>
+        Last Name: <input type="text" id="search"><br>
         <input type="button" value="Retrieve" onclick="getsession()"><br>
+
+
         <script>
                 function set() {
                     if (typeof(Storage) !== "undefined") {
