@@ -21,7 +21,8 @@
                 function set() {
                     if (typeof(Storage) !== "undefined") {
                         var value = getElementById("name").innerHTML;
-                        localStorage.setItem("name", value)
+                        localStorage.setItem("name", value.value)
+                        document.getElementById("display").innerHTML = "Set";
                     } else {
                         document.getElementById("error").innerHTML = "Sorry, your browser doesn't support web storage";
                     }
@@ -29,7 +30,7 @@
                 function get() {
                     if (typeof(Storage) !== "undefined") {
                         var value = getElementById("name").innerHTML;
-                        var send = localStorage.getItem(value);
+                        var send = localStorage.getItem(value.value);
                         document.getElementById("display").innerHTML = "Retrieved Color:" + send;
                     } else {
                         document.getElementById("error").innerHTML = "Sorry, your browser doesn't support web storage";
