@@ -8,10 +8,34 @@
         <link rel="stylesheet" href="default.css">
     </head>
     <body>
+        <p id="error"></p>
         <h3>Local Storage Example</h3>
         <p>Local Storage is a type of Web Storage that is supported by HTML5. Local Storage is storage that doesn't have an expiration date.</p><br>
             First Name: <input type="text" name="name"><br>
             Favorite Color: <input type="text" name="color"><br>
+            <p id="display">
+            <input type="button" value="Save" onclick=set()><br>
+            <input type="button" value="Retrieve" onclick=get()><br>
+            </p>
+            <script>
+                function set() {
+                    if (typeof(Storage) !== "undefined") {
+                        var value = getElementById("name").innerHTML;
+                        localStorage.setItem("name", value)
+                    } else {
+                        document.getElementById("error").innerHTML = "Sorry, your browser doesn't support web storage";
+                    }
+                }
+                function get() {
+                    if (typeof(Storage) !== "undefined") {
+                        var value = getElementById("name").innerHTML;
+                        var send = localStorage.getItem(value);
+                        document.getElementById("display").innerHTML = "Retrieved Color:" + send;
+                    } else {
+                        document.getElementById("error").innerHTML = "Sorry, your browser doesn't support web storage";
+                    }
+                }
+            </script>
         <h3>Session Storage Example</h3>
         <p>Session Storage is a type of Web Storage that is supported bu HTML5. Session Storage can only store data for one session, and the data is deleted when the browser is closed.</p><br>
         Last Name: <input type="text" name= "last"><br>
