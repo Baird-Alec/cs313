@@ -30,8 +30,8 @@
                 }
                 function get() {
                     if (typeof(Storage) !== "undefined") {
-                        var value = getElementById("name").value;
-                        var send = localStorage.getItem(value.value);
+                        var find = document.getElementById("name").value;
+                        var send = localStorage.getItem(find.value);
                         document.getElementById("display").innerHTML = "Retrieved Color:" + send;
                     } else {
                         document.getElementById("error").innerHTML = "Sorry, your browser doesn't support web storage";
