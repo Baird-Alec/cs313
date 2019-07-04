@@ -15,22 +15,22 @@
             Favorite Color: <input type="text" id="color"><br>
             <p id="display"></p>
             <input type="button" value="Save" onclick="set()"><br>
+            First Name <input type="text" id="finder"><br>
             <input type="button" value="Retrieve" onclick="get()"><br>
             <script>
                 function set() {
-                    //if (typeof(Storage) !== "undefined") {
-                        document.getElementById("display").innerHTML = "test";
+                    if (typeof(Storage) !== "undefined") {
                         var saved = document.getElementById("name").value;
                         document.getElementById("display").innerHTML = saved;
                         localStorage.setItem("named", saved.value)
-                        document.getElementById("display").innerHTML = "Set";
-                    //} else {
-                    //    document.getElementById("error").innerHTML = "Sorry, your browser doesn't support web storage";
-                    //}
+                        document.getElementById("display").innerHTML = saved.value;
+                    } else {
+                        document.getElementById("error").innerHTML = "Sorry, your browser doesn't support web storage";
+                    }
                 }
                 function get() {
                     if (typeof(Storage) !== "undefined") {
-                        var find = document.getElementById("name").value;
+                        var find = document.getElementById("finder").value;
                         var send = localStorage.getItem(find.value);
                         document.getElementById("display").innerHTML = "Retrieved Color:" + send;
                     } else {
