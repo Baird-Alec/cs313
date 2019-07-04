@@ -20,6 +20,7 @@
                 function set() {
                     //if (typeof(Storage) !== "undefined") {
                         var saved = getElementById("name").value;
+                        document.getElementById("display").innerHTML = saved;
                         localStorage.setItem("named", saved)
                         document.getElementById("display").innerHTML = "Set";
                     //} else {
