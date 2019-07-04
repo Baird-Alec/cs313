@@ -13,18 +13,23 @@
         <p>Local Storage is a type of Web Storage that is supported by HTML5. Local Storage is storage that doesn't have an expiration date.</p><br>
             First Name: <input type="text" id="name"><br>
             Favorite Color: <input type="text" id="color"><br>
-            <p id="display"></p>
             <input type="button" value="Save" onclick="set()"><br>
             First Name <input type="text" id="finder"><br>
             <input type="button" value="Retrieve" onclick="get()"><br>
-            <script>
+            <p id="display"></p>
+        <h3>Session Storage Example</h3>
+        <p>Session Storage is a type of Web Storage that is supported bu HTML5. Session Storage can only store data for one session, and the data is deleted when the browser is closed.</p><br>
+        Last Name: <input type="text" name= "last"><br>
+        Favorite Food: <input type="text" name= "food"><br>
+        <input type="button" value="Save" onclick="setsession()"><br>
+        Last Name: <input type="text" name= "search"><br>
+        <input type="button" value="Retrieve" onclick="getsession()"><br>
+        <script>
                 function set() {
                     if (typeof(Storage) !== "undefined") {
                         var saved = document.getElementById("name").value;
                         var shade = document.getElementById("color").value;
-                        document.getElementById("display").innerHTML = saved;
                         localStorage.setItem(saved, shade)
-                        document.getElementById("display").innerHTML = shade;
                     } else {
                         document.getElementById("error").innerHTML = "Sorry, your browser doesn't support web storage";
                     }
@@ -38,10 +43,24 @@
                         document.getElementById("error").innerHTML = "Sorry, your browser doesn't support web storage";
                     }
                 }
+                function setsesion() {
+                    if (typeof(Storage) !== "undefined") {
+                        var saved = document.getElementById("last").value;
+                        var snack = document.getElementById("food").value;
+                        sessionStorage.setItem(saved, snack)
+                    } else {
+                        document.getElementById("error").innerHTML = "Sorry, your browser doesn't support web storage";
+                    }
+                }
+                function getsession() {
+                    if (typeof(Storage) !== "undefined") {
+                        var find = document.getElementById("search").value;
+                        var send = sessionStorage.getItem(find);
+                        document.getElementById("displaysession").innerHTML = "Retrieved Food:" + send;
+                    } else {
+                        document.getElementById("error").innerHTML = "Sorry, your browser doesn't support web storage";
+                    }
+                }
             </script>
-        <h3>Session Storage Example</h3>
-        <p>Session Storage is a type of Web Storage that is supported bu HTML5. Session Storage can only store data for one session, and the data is deleted when the browser is closed.</p><br>
-        Last Name: <input type="text" name= "last"><br>
-        Favorite Food: <input type="text" name= "food"><br>
     </body>
 </html>
