@@ -19,8 +19,8 @@
             <script>
                 function set() {
                     //if (typeof(Storage) !== "undefined") {
-                        var value = getElementById("name").value;
-                        localStorage.setItem("name", value)
+                        var saved = getElementById("name").value;
+                        localStorage.setItem("named", saved)
                         document.getElementById("display").innerHTML = "Set";
                     //} else {
                     //    document.getElementById("error").innerHTML = "Sorry, your browser doesn't support web storage";
@@ -28,7 +28,7 @@
                 }
                 function get() {
                     if (typeof(Storage) !== "undefined") {
-                        var value = getElementById("name").innerHTML;
+                        var value = getElementById("name").value;
                         var send = localStorage.getItem(value.value);
                         document.getElementById("display").innerHTML = "Retrieved Color:" + send;
                     } else {
