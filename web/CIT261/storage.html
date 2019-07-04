@@ -18,9 +18,8 @@
             <input type="button" value="Retrieve" onclick="get()"><br>
             <script>
                 function set() {
-                    document.getElementById("display").innerHTML = "Start";
                     //if (typeof(Storage) !== "undefined") {
-                        var value = getElementById("name").innerHTML;
+                        var value = getElementById("name").value;
                         localStorage.setItem("name", value)
                         document.getElementById("display").innerHTML = "Set";
                     //} else {
