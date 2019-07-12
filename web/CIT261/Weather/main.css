@@ -23,8 +23,7 @@
 100% { transform: translate(-1px,  1px) rotate(-2deg); }
 }*/
 @keyframes flyin {
-    0% { left: 0;}
-    50%{ left : 100%;}
+    0% { left: 90;}
     100%{ left: 0;}
 }       
 body {
