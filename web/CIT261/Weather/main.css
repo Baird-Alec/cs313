@@ -4,7 +4,7 @@
     bottom:15%;
     position:absolute;
     animation:linear infinite alternate;
-    animation-name: flyin;
+    animation-name: ;
     animation-duration: 5s;
 }
 /*
@@ -23,8 +23,8 @@
 100% { transform: translate(-1px,  1px) rotate(-2deg); }
 }*/
 @keyframes flyin {
-    0% { left: 90;}
-    100%{ left: 0;}
+    0% { right: 0;}
+    100%{ right : 100%;}
 }       
 body {
     background-color:lightblue;
