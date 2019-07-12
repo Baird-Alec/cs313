@@ -2,9 +2,6 @@
       .card {
         background-color: green;
      }
-     .test {
-        background-color: purple;
-     }
      /*
      @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
      @keyframes dance {
@@ -21,5 +18,5 @@
        100% { transform: translate(-1px,  1px) rotate(-2deg); }
      }*/
      body {
-         background-color: brown;
+         background-color:lightblue;
      }
