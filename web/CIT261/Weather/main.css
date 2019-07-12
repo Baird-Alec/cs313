@@ -5,7 +5,9 @@
     position:absolute;
     font-family: cursive;
 }
-/*
+/* TODO LIST:
+    ADD HOVER ON SUBMIT
+    ADD HOVER ON CARD
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 @keyframes dance {
 0%   { transform: translate(-1px,  1px) rotate( 0deg); }
