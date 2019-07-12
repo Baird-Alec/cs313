@@ -6,77 +6,80 @@
         <link rel="stylesheet" type="text/css" href="main.css" />
     </head>
     <body>
-      Zip Code:
-      <input type="text" id="zip">
-      <button onclick="runAJAX()">Search</button>
-      <div class= "card" id= "card">
-        <p id="temp"></p>
-        <p id="high"></p>
-        <p id="low"></p>
-        <p id="humid"></p>
-      </div>
-      <script>
+        <h3>United States Weather App</h3>
+        <p>This application will prompt you to input the zip code of the area that you want to know the weather details at! This will work on any United States zip code, and  was developed as for the CIT261 Final Project.</p>
+        
+        Zip Code:
+        <input type="text" id="zip">
+        <button onclick="runAJAX()">Search</button>
+        <div class= "card" id= "card">
+            <p id="temp"></p>
+            <p id="high"></p>
+            <p id="low"></p>
+            <p id="humid"></p>
+        </div>
+        <script>
       
-        function setWeather() {
-          storeUser();
-        }
-  
-        function runAJAX() {
-          var zip = document.getElementById("zip").value;
-          storeUser();
-          AJAX(zip);
-        }
-  
-        function AJAX(zip) {
-          var URL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zip + ",us&APPID=d380e2a8215f99dffadfe81ffcbd602b";
-              
-              // AJAX
-              var xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                  var str = this.response;
-                  localStorage.setItem("userWeather", str);
-                  display();
-                }
-              };
-              xhttp.open("GET", URL, true);
-              xhttp.send();
-        }
-  
-        function display() {
-          var JSONitem = localStorage.getItem("userWeather");
-          var weather = JSON.parse(JSONitem);  
-          //current
-          var temp = convert(weather.main.temp);
-          document.getElementById("temp").innerHTML = "Current Temperature: " + temp;
-          //high
-          var high = convert(weather.main.temp_max);
-          document.getElementById("high").innerHTML = "Projected high: " + high;
-          //low
-          var low = convert(weather.main.temp_min);
-          document.getElementById("low").innerHTML = "Projected low: " + low;
- 
-          //humid
-          var humid = weather.main.humidity + "&#37;";
-          document.getElementById("humid").innerHTML = "Current humidity: " + humid; 
+            function setWeather() {
+                storeUser();
+            }
+    
+            function runAJAX() {
+                var zip = document.getElementById("zip").value;
+                storeUser();
+                AJAX(zip);
+            }
+    
+            function AJAX(zip) {
+            var URL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zip + ",us&APPID=d380e2a8215f99dffadfe81ffcbd602b";
+                
+                // AJAX
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                    var str = this.response;
+                    localStorage.setItem("userWeather", str);
+                    display();
+                    }
+                };
+                xhttp.open("GET", URL, true);
+                xhttp.send();
+            }
+    
+            function display() {
+                var JSONitem = localStorage.getItem("userWeather");
+                var weather = JSON.parse(JSONitem);  
+                //current
+                var temp = convert(weather.main.temp);
+                document.getElementById("temp").innerHTML = "Current Temperature: " + temp;
+                //high
+                var high = convert(weather.main.temp_max);
+                document.getElementById("high").innerHTML = "Projected high: " + high;
+                //low
+                var low = convert(weather.main.temp_min);
+                document.getElementById("low").innerHTML = "Projected low: " + low;
+        
+                //humid
+                var humid = weather.main.humidity + "&#37;";
+                document.getElementById("humid").innerHTML = "Current humidity: " + humid; 
 
-          //add animations
-          document.getElementById("card").style.animation = "flyin 3s";
-        }
-  
-        function convert(k) {
-          var f = Math.round((k - 273.15) * 9/5 + 32) + "&#8457";
-          return f;
-        }
-  
-        function storeUser() {
-          localStorage.setItem("userZip", document.getElementById("zip").value);
-        }
-  
-        function forgetMe() {
-          localStorage.clear();
-          location.reload(true);
-        }
+                //add animations
+                document.getElementById("card").style.animation = "flyin 3s";
+            }
+    
+            function convert(k) {
+                var f = Math.round((k - 273.15) * 9/5 + 32) + "&#8457";
+                return f;
+            }
+    
+            function storeUser() {
+                localStorage.setItem("userZip", document.getElementById("zip").value);
+            }
+    
+            function forgetMe() {
+                localStorage.clear();
+                location.reload(true);
+            }
       </script>
     </body>
 </html>
