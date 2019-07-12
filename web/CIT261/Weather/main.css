@@ -4,7 +4,7 @@
     bottom:15%;
     position:absolute;
     animation:linear infinite alternate;
-    animation-name: ;
+    animation-name: flyin;
     animation-duration: 5s;
 }
 /*
