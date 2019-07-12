@@ -1,11 +1,6 @@
 
 .card {
     background-color: green;
-    bottom:15%;
-    position:absolute;
-    animation:linear infinite alternate;
-    animation-name: flyin;
-    animation-duration: 5s;
 }
 /*
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
@@ -23,7 +18,7 @@
 100% { transform: translate(-1px,  1px) rotate(-2deg); }
 }*/
 @keyframes flyin {
-    0%{ left : 100%;}
+    0%{ left : 90%;}
     100%{ left: 0;}
 }       
 body {

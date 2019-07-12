@@ -59,6 +59,9 @@
           //humid
           var humid = weather.main.humidity + "&#37;";
           document.getElementById("humid").innerHTML = "Current humidity: " + humid; 
+
+          //add animations
+          document.getElementById("card").style.animation = "flyin 5s 1";
         }
   
         function convert(k) {
