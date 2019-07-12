@@ -3,6 +3,8 @@
     background-color:teal;
     bottom:45%;
     position:absolute;
+    font-family: cursive;
+    font-weight: bold;
 }
 /*
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
