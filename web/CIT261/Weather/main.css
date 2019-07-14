@@ -4,20 +4,20 @@
     bottom:45%;
     position:absolute;
     font-family: 'Times New Roman', Times, serif;
-    transition: width 2s;
 }
 .card:hover {
     background-color: rgb(35, 168, 168);
     font-family: cursive;
-    width: 500px;
 }
 #but {
     background-color: #FCFCFC;
+    transition: width 2s;
 }
 #but:hover {
     animation-name: point;
     animation-duration: 1ms;
     animation-iteration-count: infinite;
+    width: 50px;
 }
 @keyframes spin {
     100% { transform: rotate(360deg);}
