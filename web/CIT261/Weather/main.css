@@ -3,11 +3,11 @@
     background-color: lightseagreen;
     bottom:45%;
     position:absolute;
-    font-family: cursive;
+    font-family: 'Times New Roman', Times, serif;
 }
 .card:hover {
     background-color: darkseagreen;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: cursive;
 }
 /* TODO LIST:
     ADD HOVER ON SUBMIT
