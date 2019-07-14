@@ -16,6 +16,7 @@
 #but {
     animation-name: point;
     animation-duration: 10s;
+    background-color: #FCFCFC;
 }
 @keyframes spin {
     100% { transform: rotate(360deg);}
@@ -26,7 +27,8 @@
 }
 @keyframes point {
     100% { cursor: pointer; background-color: lightslategray; }
-}       
+}
+
 body {
     background-color:lightblue;
 }
