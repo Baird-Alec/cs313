@@ -14,9 +14,11 @@
     animation-duration: 6s;
 }
 #but {
-    animation-name: point;
-    animation-duration: 4s;
     background-color: #FCFCFC;
+}
+#but:hover {
+    animation-name: point;
+    animation-duration: 1s;
 }
 @keyframes spin {
     100% { transform: rotate(360deg);}
