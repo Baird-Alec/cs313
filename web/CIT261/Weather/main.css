@@ -28,7 +28,10 @@
     0% { cursor: pointer; background-color: lightslategray;}
     100% { cursor: pointer; background-color: lightslategray; }
 }
-
+@keyframes flyout {
+    0%{left: 1%; }
+    100%{left: 100%; }
+}
 body {
     background-color:lightblue;
 }

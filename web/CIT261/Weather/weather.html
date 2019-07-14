@@ -27,6 +27,7 @@
             function runAJAX() {
                 var zip = document.getElementById("zip").value;
                 storeUser();
+                hideCard();
                 AJAX(zip);
             }
     
@@ -45,7 +46,10 @@
                 xhttp.open("GET", URL, true);
                 xhttp.send();
             }
-    
+            function hideCard() {
+                document.getElementById("card").style.animation = "flyout 1ms";
+            }
+
             function display() {
                 var JSONitem = localStorage.getItem("userWeather");
                 var weather = JSON.parse(JSONitem);  
@@ -74,11 +78,6 @@
     
             function storeUser() {
                 localStorage.setItem("userZip", document.getElementById("zip").value);
-            }
-    
-            function forgetMe() {
-                localStorage.clear();
-                location.reload(true);
             }
       </script>
     </body>
