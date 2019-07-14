@@ -8,9 +8,11 @@
 .card:hover {
     background-color: darkseagreen;
     font-family: cursive;
-    animation-name: dance;
+    transform: rotate(360deg);
+    /*animation-name: dance;
     animation-duration: 6s;
     animation-iteration-count: infinite;
+    */
 }
 /* TODO LIST:
     ADD HOVER ON SUBMIT
@@ -18,9 +20,7 @@
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 */
 @keyframes dance {
-0%   {transform: rotate(20deg); }
-50% {transform: rotate(20deg);}
-100% {transform: rotate(20deg);}
+
 }
 @keyframes flyin {
     0%{ left : 90%;}
