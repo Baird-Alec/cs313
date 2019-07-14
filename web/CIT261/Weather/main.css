@@ -6,12 +6,8 @@
     font-family: 'Times New Roman', Times, serif;
 }
 .card:hover {
-    background-color: darkseagreen;
+    background-color: rgb(35, 168, 168);
     font-family: cursive;
-    transition: 5s;
-    transform: rotate(360deg);
-    animation-name: dance;
-    animation-duration: 6s;
 }
 #but {
     background-color: #FCFCFC;
