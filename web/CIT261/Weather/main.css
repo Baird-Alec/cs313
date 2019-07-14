@@ -18,7 +18,7 @@
 }
 #but:hover {
     animation-name: point;
-    animation-duration: 1s;
+    animation-duration: 1ms;
     animation-iteration-count: infinite;
 }
 @keyframes spin {
