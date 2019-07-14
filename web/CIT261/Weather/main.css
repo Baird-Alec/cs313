@@ -4,10 +4,13 @@
     bottom:45%;
     position:absolute;
     font-family: 'Times New Roman', Times, serif;
+    width: 200px;
+    transition: width 2s;
 }
 .card:hover {
     background-color: rgb(35, 168, 168);
     font-family: cursive;
+    width: 600px;
 }
 #but {
     background-color: #FCFCFC;
