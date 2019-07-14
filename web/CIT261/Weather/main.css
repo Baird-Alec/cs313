@@ -18,8 +18,9 @@
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 */
 @keyframes dance {
-0%   {rotate: 0deg; }
-100% {rotate: 180deg; }
+0%   {transform: rotate(20deg); }
+50% {transform: rotate(20deg);}
+100% {transform: rotate(20deg);}
 }
 @keyframes flyin {
     0%{ left : 90%;}
