@@ -11,13 +11,15 @@
 }
 #but {
     background-color: #FCFCFC;
+    width: 100px;
     transition: width 2s;
+
 }
 #but:hover {
     animation-name: point;
     animation-duration: 1ms;
     animation-iteration-count: infinite;
-    width: 50px;
+    width: 150px;
 }
 @keyframes spin {
     100% { transform: rotate(360deg);}
