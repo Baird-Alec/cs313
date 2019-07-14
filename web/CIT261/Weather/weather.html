@@ -13,6 +13,7 @@
         <input type="text" id="zip">
         <button id = "but" onclick="runAJAX()">Search</button>
         <div class= "card" id= "card">
+            <p id="city"></p>
             <p id="temp"></p>
             <p id="high"></p>
             <p id="low"></p>
@@ -22,6 +23,7 @@
 
             function runAJAX() {
                 var zip = document.getElementById("zip").value;
+                document.getElementById("city").innerHTML = "Zip: " + zip;
                 storeUser();
                 hideCard();
                 AJAX(zip);
@@ -76,10 +78,11 @@
             function storeUser() {
                 localStorage.setItem("userZip", document.getElementById("zip").value);
             }
-            
+
             function checkUser() {
                 var city = localStorage.getItem("userZip");
                 if (city != null) {
+                    document.getElementById("city").innerHTML = "Zip: " + city;
                     AJAX(city);
                 }
             }
