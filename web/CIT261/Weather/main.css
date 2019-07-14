@@ -19,6 +19,7 @@
 #but:hover {
     animation-name: point;
     animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 @keyframes spin {
     100% { transform: rotate(360deg);}
