@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="main.css" />
     </head>
-    <body>
+    <body onload="checkUser()">
         <h3 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">United States Weather App</h3>
         <p>This application will prompt you to input the zip code of the area that you want to know the weather details at! This will work on any United States zip code, and  was developed for the CIT261 Final Project.</p>
         
@@ -19,11 +19,7 @@
             <p id="humid"></p>
         </div>
         <script>
-      
-            function setWeather() {
-                storeUser();
-            }
-    
+
             function runAJAX() {
                 var zip = document.getElementById("zip").value;
                 storeUser();
@@ -46,6 +42,7 @@
                 xhttp.open("GET", URL, true);
                 xhttp.send();
             }
+
             function hideCard() {
                 document.getElementById("card").style.animation = "flyout 1ms";
             }
@@ -78,6 +75,13 @@
     
             function storeUser() {
                 localStorage.setItem("userZip", document.getElementById("zip").value);
+            }
+            
+            function checkUser() {
+                var city = localStorage.getItem("userZip");
+                if (city != null) {
+                    AJAX(city);
+                }
             }
       </script>
     </body>
