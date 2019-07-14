@@ -10,10 +10,8 @@
     font-family: cursive;
     transition: 5s;
     transform: rotate(360deg);
-    /*animation-name: dance;
+    animation-name: dance;
     animation-duration: 6s;
-    animation-iteration-count: infinite;
-    */
 }
 /* TODO LIST:
     ADD HOVER ON SUBMIT
@@ -21,7 +19,7 @@
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 */
 @keyframes dance {
-
+    100% { transform: rotate(360deg);}
 }
 @keyframes flyin {
     0%{ left : 90%;}
