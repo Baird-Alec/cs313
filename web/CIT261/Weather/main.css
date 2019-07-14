@@ -5,6 +5,9 @@
     position:absolute;
     font-family: cursive;
 }
+.card:hover {
+    background-color: darkseagreen;
+}
 /* TODO LIST:
     ADD HOVER ON SUBMIT
     ADD HOVER ON CARD
