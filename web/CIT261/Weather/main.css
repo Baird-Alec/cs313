@@ -29,7 +29,7 @@
     100%{ left: 1%;}
 }
 @keyframes point {
-    0% { cursor: pointer; background-color: lightslategray;}
+    0% { cursor: pointer; background-color: slategray;}
     100% { cursor: pointer; background-color: lightslategray; }
 }
 @keyframes flyout {
