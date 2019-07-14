@@ -29,6 +29,7 @@
     100%{ left: 1%;}
 }
 @keyframes point {
+    0% { cursor: pointer; background-color: lightslategray;}
     100% { cursor: pointer; background-color: lightslategray; }
 }
 
