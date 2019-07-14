@@ -8,6 +8,7 @@
 .card:hover {
     background-color: darkseagreen;
     font-family: cursive;
+    transition: 5s;
     transform: rotate(360deg);
     /*animation-name: dance;
     animation-duration: 6s;
