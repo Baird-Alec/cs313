@@ -15,7 +15,7 @@
 }
 #but {
     animation-name: point;
-    animation-duration: 1s;
+    animation-duration: 4s;
     background-color: #FCFCFC;
 }
 @keyframes spin {
